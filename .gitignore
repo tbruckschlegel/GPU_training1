@@ -93,5 +93,8 @@ Thumbs.db
 # checkpoints directory
 /checkpoints
 
+# checkpoint directory
+/checkpoint
+
 # python cache directories
 /__pycache__
