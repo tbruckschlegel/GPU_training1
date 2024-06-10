@@ -8,17 +8,19 @@ A Pytorch test project.
 
 ## Requirements
 
-* Windows or Linux OS
+* Windows 10/11 or Linux OS
 * Python 3.x (https://www.python.org/)
 * Pytorch with CUDA support (https://pytorch.org/get-started/locally/)
 * CuPy (https://github.com/cupy/cupy)
-* CUDA (https://developer.nvidia.com/cuda-downloads) 
+* CUDA SDK (https://developer.nvidia.com/cuda-downloads) 
 
 ## Running the script
 
 **Clone the repo**
 
 ```$ git clone https://github.com/tbruckschlegel/example1.git```
+
+Follow the Setup here https://github.com/lhao0301/pytorch-liteflownet3
 
 **Execute the training**
 
