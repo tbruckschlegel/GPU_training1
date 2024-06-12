@@ -1,10 +1,14 @@
 # Pytorch GPU training test project
 
-A Pytorch test project. 
+A Pytorch test project to train a neural network on the GPU. 
 
 - Based on https://github.com/ltkong218/IFRNet
 
 - Changed to use https://github.com/lhao0301/pytorch-liteflownet3 instead of https://github.com/sniklaus/pytorch-liteflownet and to run on a single GPU, instead of a distributed set of nodes.
+
+## Details
+
+https://deepai.org/publication/ifrnet-intermediate-feature-refine-network-for-efficient-frame-interpolation
 
 ## Requirements
 
@@ -22,7 +26,7 @@ A Pytorch test project.
 
 Follow the Setup here https://github.com/lhao0301/pytorch-liteflownet3
 
-**Execute the training**
+**Training the network**
 
 Follow the steps from here https://github.com/ltkong218/IFRNet until you reach the training section, then run the single GPU training:
 
@@ -31,6 +35,11 @@ Follow the steps from here https://github.com/ltkong218/IFRNet until you reach t
 ```python train_vimeo90k_single_gpu.py --model_name IFRNet_S --world_size 4 --epochs 300 --batch_size 6 --lr_start 1e-4 --lr_end 1e-5 --training_data_location "d:\Downloads\vimeo_triplet"```
 
 ```python train_vimeo90k_single_gpu.py --model_name IFRNet_L --world_size 4 --epochs 300 --batch_size 6 --lr_start 1e-4 --lr_end 1e-5 --training_data_location "d:\Downloads\vimeo_triplet"```
+
+Resume a training:
+
+```python train_vimeo90k_single_gpu.py --model_name IFRNet_S --world_size 4 --epochs 300 --batch_size 6 --lr_start 1e-4 --lr_end 1e-5 --training_data_location "d:\Downloads\vimeo_triplet" --resume_epoch 191 --resume_path "./checkpoint/IFRNet_S/2024_06_11_00_39_24/IFRNet_S_latest.pth"```
+
 
 **References**
 
