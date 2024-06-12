@@ -166,5 +166,8 @@ if __name__ == "__main__":
     
     model = Model().to(args.device)
 
+    if args.resume_epoch != 0:
+        model.load_state_dict(torch.load(args.resume_path, map_location='cpu'))
+
     device = 0  # shorthand for cuda:0
     train(args, device, model)
